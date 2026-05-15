@@ -23,6 +23,18 @@ The aligned dataset used for the current rolling IDS experiments is included at:
 
 - `data/aligned_all_data_clean_delay.csv`
 
+
+## Collection and Control Scripts
+
+Data collection scripts are stored separately from device control scripts:
+
+| Folder | Purpose |
+|---|---|
+| `scripts/collection/` | MQTT/serial/Home Assistant/Tapo/Hue telemetry collection scripts |
+| `scripts/control/` | Automated Hue light and Dreo fan switching scripts |
+
+Sensitive credentials are not committed. Configure scripts with environment variables or command-line arguments.
+
 ## Training Commands
 
 Single-point version:
