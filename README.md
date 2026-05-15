@@ -49,10 +49,3 @@ Quantile version:
 ```powershell
 python models/rolling_quantile/online_rolling_quantile_gnn_gru_ids_mqtt.py --no-latch
 ```
-
-## Legacy Packages
-
-Earlier packaged artifacts are still kept in the repository:
-
-- `gnn_gru_ids_package_20260513_201740.zip`
-- `collection_scripts_package_20260513_201903.zip`
