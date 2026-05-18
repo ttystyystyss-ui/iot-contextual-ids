@@ -113,14 +113,16 @@
   <path class="arrowG" d="M220 762 L260 762"/>
   <rect class="boxG" x="260" y="714" width="154" height="96"/><text class="t" x="337" y="740" text-anchor="middle" font-weight="800" fill="#117025">2. Predict</text><text class="t" x="337" y="762" text-anchor="middle" font-weight="800" fill="#117025">P10/P50/P90</text><text class="s" x="337" y="788" text-anchor="middle">model outputs</text><text class="s" x="337" y="806" text-anchor="middle">for current target</text>
   <path class="arrowG" d="M414 762 L454 762"/>
-  <rect class="boxG" x="454" y="714" width="190" height="96"/><text class="t" x="549" y="740" text-anchor="middle" font-weight="800" fill="#117025">3. Wait future 5s</text><text class="t" x="549" y="762" text-anchor="middle" font-weight="800" fill="#117025">and compute</text><text class="s" x="549" y="788" text-anchor="middle">median(t+3,t+4,t+5)</text><text class="s" x="549" y="806" text-anchor="middle">- current</text>
+  <rect class="boxG" x="454" y="714" width="190" height="96"/><text class="t" x="549" y="740" text-anchor="middle" font-weight="800" fill="#117025">3. Wait future 5s</text><text class="t" x="549" y="762" text-anchor="middle" font-weight="800" fill="#117025">and score error</text><text class="s" x="549" y="788" text-anchor="middle">interval error vs.</text><text class="s" x="549" y="806" text-anchor="middle">validation thresholds</text>
   <path class="arrowG" d="M337 810 L337 852 L240 852"/><path class="arrowR" d="M549 810 L549 852 L474 852"/>
   <rect class="boxG" x="110" y="852" width="224" height="58"/><text class="t" x="222" y="877" text-anchor="middle" font-weight="800" fill="#117025">Inside P10-P90 interval</text><text class="t" x="222" y="900" text-anchor="middle" fill="#117025">Normal</text>
   <rect class="boxR" x="424" y="852" width="224" height="58"/><text class="t" x="536" y="877" text-anchor="middle" font-weight="800" fill="#df1f26">Outside P10-P90 interval</text><text class="t" x="536" y="900" text-anchor="middle" fill="#df1f26">Anomaly / Alert</text>
 
   <rect class="panel" x="750" y="636" width="1028" height="300"/>
   <text class="h" x="782" y="682">Compact Scope</text>
-  <text class="t" x="782" y="724">This vector version keeps the same logic as the detailed poster-style diagram, but removes nonessential explanatory text.</text>
-  <text class="t" x="782" y="760">It preserves the measured-delay table, MQTT-to-CSV mapping, target construction, graph structure, model pipeline, rolling context, quantile intervals, and online anomaly rule.</text>
-  <text class="t" x="782" y="796">Use this figure when the page needs the whole current method in one clean overview.</text>
+  <text class="t" x="782" y="718">Training loss: weighted pinball quantile loss for q = 0.10, 0.50, 0.90 in standardized response space.</text>
+  <text class="t" x="782" y="750">Interval error: violation = max(P10 - y, 0) + max(y - P90, 0); error = weighted violation^2.</text>
+  <text class="t" x="782" y="782">Training thresholds: total and per-target thresholds are validation interval-error percentiles.</text>
+  <text class="t" x="782" y="814">Online alert: total_error &gt; threshold OR target_error &gt; target_threshold, for consecutive high-error windows.</text>
+  <text class="t" x="782" y="846">Default online consecutive = 2; --no-latch disables holding anomaly=1 after the streak clears.</text>
 </svg>

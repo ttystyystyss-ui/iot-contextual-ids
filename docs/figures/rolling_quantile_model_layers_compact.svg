@@ -93,11 +93,12 @@
   <text class="stripHead" x="64" y="826">Graph Structure</text>
   <text class="t" x="64" y="858">Nodes: L light_state, F fan_state, A ambient_light, P total_power_w.</text>
   <text class="t" x="64" y="888">Edges: L -> A, L -> P, F -> P, plus self-loops on all nodes.</text>
-  <text class="stripHead" x="630" y="826">Target and Window</text>
-  <text class="t" x="630" y="858">Past input: 10s window at 1s resolution, from t-9 to t.</text>
-  <text class="t" x="630" y="888">Response target: median(t+3,t+4,t+5) - current; skip future state transitions.</text>
+  <text class="stripHead" x="630" y="826">Target, Loss, and Thresholds</text>
+  <text class="t" x="630" y="858">Target: median(t+3,t+4,t+5) - current; skip future state transitions.</text>
+  <text class="t" x="630" y="888">Loss: weighted pinball quantile loss for P10/P50/P90 in standardized response space.</text>
+  <text class="t" x="630" y="918">Thresholds: validation interval-error percentile, saved as total and per-target thresholds.</text>
   <text class="stripHead" x="1260" y="826">Dimension Summary</text>
   <text class="t" x="1260" y="858">Input R^10x4x4 -> flattened sequence R^10x64.</text>
   <text class="t" x="1260" y="888">GRU hidden R^64 -> context concat R^65 -> quantile output R^6.</text>
-  <text class="s" x="950" y="944" text-anchor="middle">Self-review note: temperature is excluded from the current model and remains in future work.</text>
+  <text class="s" x="950" y="970" text-anchor="middle">Online anomaly if total_error or per-target interval error exceeds its threshold for the configured consecutive count; temperature remains future work.</text>
 </svg>
