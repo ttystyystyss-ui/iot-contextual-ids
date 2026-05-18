@@ -1,6 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
-  <defs>
-    <style>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1600"
+   height="900"
+   viewBox="0 0 1600 900"
+   version="1.1"
+   id="svg61"
+   sodipodi:docname="experimental_environment_architecture.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview61"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.85888889"
+     inkscape:cx="799.87063"
+     inkscape:cy="450"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg61" />
+  <defs
+     id="defs4">
+    <style
+       id="style1">
       .bg { fill: #f7f9fc; }
       .panel { fill: #ffffff; stroke: #193a7a; stroke-width: 2.2; rx: 18; }
       .zone { fill: #fdfefe; stroke: #b8c6df; stroke-width: 1.6; rx: 16; }
@@ -11,7 +43,7 @@
       .text { font-family: Arial, Helvetica, sans-serif; font-size: 17px; fill: #1c2740; }
       .small { font-family: Arial, Helvetica, sans-serif; font-size: 14px; fill: #44516b; }
       .tiny { font-family: Arial, Helvetica, sans-serif; font-size: 12px; fill: #536079; }
-      .topic { font-family: "Courier New", monospace; font-size: 15px; fill: #24365f; }
+      .topic { font-family: &quot;Courier New&quot;, monospace; font-size: 15px; fill: #24365f; }
       .device { fill: #eef5ff; stroke: #2f67c4; stroke-width: 1.6; rx: 12; }
       .collector { fill: #fff8ec; stroke: #d9831f; stroke-width: 1.6; rx: 12; }
       .control { fill: #eefaf0; stroke: #24823b; stroke-width: 1.6; rx: 12; }
@@ -27,120 +59,466 @@
       .badge { fill: #102a63; rx: 9; }
       .badgeText { font-family: Arial, Helvetica, sans-serif; font-size: 17px; font-weight: 800; fill: #ffffff; }
     </style>
-    <marker id="arrowHead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L10,4 L0,8 Z" fill="#1d3f82"/>
+    <marker
+       id="arrowHead"
+       markerWidth="10"
+       markerHeight="8"
+       refX="9"
+       refY="4"
+       orient="auto">
+      <path
+         d="M0,0 L10,4 L0,8 Z"
+         fill="#1d3f82"
+         id="path1" />
     </marker>
-    <marker id="arrowHeadOrange" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L10,4 L0,8 Z" fill="#d06c00"/>
+    <marker
+       id="arrowHeadOrange"
+       markerWidth="10"
+       markerHeight="8"
+       refX="9"
+       refY="4"
+       orient="auto">
+      <path
+         d="M0,0 L10,4 L0,8 Z"
+         fill="#d06c00"
+         id="path2" />
     </marker>
-    <marker id="arrowHeadPurple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L10,4 L0,8 Z" fill="#5a2db5"/>
+    <marker
+       id="arrowHeadPurple"
+       markerWidth="10"
+       markerHeight="8"
+       refX="9"
+       refY="4"
+       orient="auto">
+      <path
+         d="M0,0 L10,4 L0,8 Z"
+         fill="#5a2db5"
+         id="path3" />
     </marker>
-    <marker id="arrowHeadGreen" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
-      <path d="M0,0 L10,4 L0,8 Z" fill="#21833a"/>
+    <marker
+       id="arrowHeadGreen"
+       markerWidth="10"
+       markerHeight="8"
+       refX="9"
+       refY="4"
+       orient="auto">
+      <path
+         d="M0,0 L10,4 L0,8 Z"
+         fill="#21833a"
+         id="path4" />
     </marker>
   </defs>
-
-  <rect class="bg" x="0" y="0" width="1600" height="900"/>
-  <rect class="panel" x="16" y="16" width="1568" height="868"/>
-
-  <text class="title" x="800" y="66" text-anchor="middle">MQTT IoT Contextual IDS Experimental Environment</text>
-  <text class="subtitle" x="800" y="96" text-anchor="middle">Physical devices, WSL broker, Python publishers/subscribers, online detection, and alert output</text>
-
-  <rect class="zone" x="42" y="128" width="410" height="640"/>
-  <text class="h2" x="70" y="166">1. Physical Bench</text>
-  <text class="small" x="70" y="190">real devices on the desk / local Wi-Fi</text>
-
-  <rect class="device" x="72" y="222" width="330" height="86"/>
-  <text class="h3" x="95" y="253">Arduino sensor node</text>
-  <text class="text" x="95" y="280">DHT / light sensor via serial COM3</text>
-
-  <rect class="device" x="72" y="338" width="330" height="86"/>
-  <text class="h3" x="95" y="369">Philips Hue light</text>
-  <text class="text" x="95" y="396">state read through local Hue Bridge</text>
-
-  <rect class="device" x="72" y="454" width="330" height="86"/>
-  <text class="h3" x="95" y="485">Tapo P110 smart plug</text>
-  <text class="text" x="95" y="512">fan power telemetry from plug API</text>
-
-  <rect class="device" x="72" y="570" width="330" height="86"/>
-  <text class="h3" x="95" y="601">Dreo fan</text>
-  <text class="text" x="95" y="628">fan state via Home Assistant</text>
-
-  <rect class="zone" x="500" y="128" width="390" height="640"/>
-  <text class="h2" x="528" y="166">2. Windows Python Layer</text>
-  <text class="small" x="528" y="190">collection, control, and online IDS scripts</text>
-
-  <rect class="collector" x="528" y="216" width="320" height="70"/>
-  <text class="h3" x="550" y="244">read_arduino.py</text>
-  <text class="topic" x="550" y="268">publish iot/arduino</text>
-
-  <rect class="collector" x="528" y="312" width="320" height="70"/>
-  <text class="h3" x="550" y="340">philips_hue_to_mqtt.py</text>
-  <text class="topic" x="550" y="364">publish iot/light_state</text>
-
-  <rect class="collector" x="528" y="408" width="320" height="70"/>
-  <text class="h3" x="550" y="436">tapo_p110_to_mqtt.py</text>
-  <text class="topic" x="550" y="460">publish iot/tapo_p110</text>
-
-  <rect class="collector" x="528" y="504" width="320" height="70"/>
-  <text class="h3" x="550" y="532">dreo_ha_to_mqtt.py</text>
-  <text class="topic" x="550" y="556">publish iot/dreo_fan</text>
-
-  <rect class="control" x="528" y="626" width="320" height="82"/>
-  <text class="h3" x="550" y="656">control scripts</text>
-  <text class="small" x="550" y="680">hue_control.py / dreo_fan_control.py</text>
-  <text class="small" x="550" y="700">scheduled or random state switching</text>
-
-  <rect class="broker" x="954" y="312" width="250" height="164"/>
-  <text class="brokerText" x="1079" y="358" text-anchor="middle">WSL MQTT Broker</text>
-  <text class="brokerSmall" x="1079" y="390" text-anchor="middle">Mosquitto</text>
-  <text class="brokerSmall" x="1079" y="418" text-anchor="middle">172.24.224.223 : 1883</text>
-  <text class="brokerSmall" x="1079" y="446" text-anchor="middle">central pub/sub bus</text>
-
-  <rect class="zone" x="1260" y="128" width="300" height="640"/>
-  <text class="h2" x="1288" y="166">3. Subscribers</text>
-  <text class="small" x="1288" y="190">aligned data and live detection</text>
-
-  <rect class="collector" x="1292" y="238" width="230" height="96"/>
-  <text class="h3" x="1312" y="268">collect_all_mqtt.py</text>
-  <text class="small" x="1312" y="293">subscribes all telemetry topics</text>
-  <text class="small" x="1312" y="315">writes aligned CSV at 1 Hz</text>
-
-  <rect class="ids" x="1292" y="398" width="230" height="118"/>
-  <text class="h3" x="1312" y="428">online IDS</text>
-  <text class="small" x="1312" y="453">rolling_quantile / multistep</text>
-  <text class="small" x="1312" y="475">subscribes live telemetry</text>
-  <text class="small" x="1312" y="497">publishes alert topic</text>
-
-  <rect class="control" x="1292" y="586" width="230" height="86"/>
-  <text class="h3" x="1312" y="616">outputs</text>
-  <text class="small" x="1312" y="640">CSV dataset / online log</text>
-  <text class="small" x="1312" y="662">normal or anomaly alert</text>
-
-  <path class="arrow" d="M402 265 C455 265 470 251 528 251"/>
-  <path class="arrow" d="M402 381 C455 381 470 347 528 347"/>
-  <path class="arrow" d="M402 497 C455 497 470 443 528 443"/>
-  <path class="arrow" d="M402 613 C455 613 470 539 528 539"/>
-
-  <path class="arrowPub" d="M848 251 C905 251 913 335 954 354"/>
-  <path class="arrowPub" d="M848 347 C905 347 913 370 954 382"/>
-  <path class="arrowPub" d="M848 443 C905 443 913 418 954 410"/>
-  <path class="arrowPub" d="M848 539 C905 539 913 455 954 438"/>
-
-  <path class="arrowSub" d="M1204 362 C1242 362 1248 286 1292 286"/>
-  <path class="arrowSub" d="M1204 426 C1242 426 1248 456 1292 456"/>
-  <path class="arrowPub dash" d="M1408 516 C1408 548 1408 554 1408 586"/>
-
-  <path class="arrowCtl" d="M688 626 C688 602 506 428 402 381"/>
-  <path class="arrowCtl" d="M720 626 C720 596 506 640 402 613"/>
-  <path class="arrowCtl dash" d="M712 708 C712 798 236 792 236 656"/>
-
-  <rect class="badge" x="78" y="796" width="86" height="34"/>
-  <text class="badgeText" x="121" y="819" text-anchor="middle">Topics</text>
-  <text class="topic" x="184" y="819">iot/arduino, iot/light_state, iot/tapo_p110, iot/dreo_fan, iot/rolling_quantile_gnn_gru_ids_alert</text>
-
-  <rect class="badge" x="78" y="838" width="86" height="34"/>
-  <text class="badgeText" x="121" y="861" text-anchor="middle">Scope</text>
-  <text class="small" x="184" y="861">Diagram shows the deployed experimental environment, not the internal GAT-GRU training architecture.</text>
+  <rect
+     class="bg"
+     x="6.9857697"
+     y="-6.9857697"
+     width="1600"
+     height="900"
+     id="rect4" />
+  <rect
+     class="panel"
+     x="22.985769"
+     y="9.0142307"
+     width="1568"
+     height="868"
+     id="rect5" />
+  <text
+     class="title"
+     x="806.98578"
+     y="59.014229"
+     text-anchor="middle"
+     id="text5">MQTT IoT Contextual IDS Experimental Environment</text>
+  <text
+     class="subtitle"
+     x="806.98578"
+     y="89.014229"
+     text-anchor="middle"
+     id="text6">Physical devices, WSL broker, Python publishers/subscribers, online detection, and alert output</text>
+  <rect
+     class="zone"
+     x="48.985771"
+     y="121.01423"
+     width="410"
+     height="640"
+     id="rect6" />
+  <text
+     class="h2"
+     x="76.985771"
+     y="159.01424"
+     id="text7">1. Physical Bench</text>
+  <text
+     class="small"
+     x="76.985771"
+     y="183.01424"
+     id="text8">real devices on the desklocal Wi-Fi</text>
+  <rect
+     class="device"
+     x="78.985771"
+     y="215.01424"
+     width="330"
+     height="86"
+     id="rect8" />
+  <text
+     class="h3"
+     x="101.98577"
+     y="246.01424"
+     id="text9">Arduino sensor node</text>
+  <text
+     class="text"
+     x="101.98577"
+     y="273.01422"
+     id="text10">DHT / light sensor via serial COM3</text>
+  <rect
+     class="device"
+     x="78.985771"
+     y="331.01422"
+     width="330"
+     height="86"
+     id="rect10" />
+  <text
+     class="h3"
+     x="101.98577"
+     y="362.01422"
+     id="text11">Philips Hue light</text>
+  <text
+     class="text"
+     x="101.98577"
+     y="389.01422"
+     id="text12">state read through local Hue Bridge</text>
+  <rect
+     class="device"
+     x="78.985771"
+     y="447.01422"
+     width="330"
+     height="86"
+     id="rect12" />
+  <text
+     class="h3"
+     x="101.98577"
+     y="478.01422"
+     id="text13">Tapo P110 smart plug</text>
+  <text
+     class="text"
+     x="101.98577"
+     y="505.01422"
+     id="text14">fan power telemetry from plug API</text>
+  <rect
+     class="device"
+     x="78.985771"
+     y="563.01422"
+     width="330"
+     height="86"
+     id="rect14" />
+  <text
+     class="h3"
+     x="101.98577"
+     y="594.01422"
+     id="text15">Dreo fan</text>
+  <text
+     class="text"
+     x="101.98577"
+     y="621.01422"
+     id="text16">fan state via Home Assistant</text>
+  <rect
+     class="zone"
+     x="506.98578"
+     y="121.01423"
+     width="390"
+     height="640"
+     id="rect16" />
+  <text
+     class="h2"
+     x="534.98578"
+     y="159.01424"
+     id="text17">2. Windows Python Layer</text>
+  <text
+     class="small"
+     x="534.98578"
+     y="183.01424"
+     id="text18">collection, control, and online IDS scripts</text>
+  <rect
+     class="collector"
+     x="534.98578"
+     y="209.01424"
+     width="320"
+     height="70"
+     id="rect18" />
+  <text
+     class="h3"
+     x="556.98578"
+     y="237.01424"
+     id="text19">read_arduino.py</text>
+  <text
+     class="topic"
+     x="556.98578"
+     y="261.01422"
+     id="text20">publish iot/arduino</text>
+  <rect
+     class="collector"
+     x="534.98578"
+     y="305.01422"
+     width="320"
+     height="70"
+     id="rect20" />
+  <text
+     class="h3"
+     x="556.98578"
+     y="333.01422"
+     id="text21">philips_hue_to_mqtt.py</text>
+  <text
+     class="topic"
+     x="556.98578"
+     y="357.01422"
+     id="text22">publish iot/light_state</text>
+  <rect
+     class="collector"
+     x="534.98578"
+     y="401.01422"
+     width="320"
+     height="70"
+     id="rect22" />
+  <text
+     class="h3"
+     x="556.98578"
+     y="429.01422"
+     id="text23">tapo_p110_to_mqtt.py</text>
+  <text
+     class="topic"
+     x="556.98578"
+     y="453.01422"
+     id="text24">publish iot/tapo_p110</text>
+  <rect
+     class="collector"
+     x="534.98578"
+     y="497.01422"
+     width="320"
+     height="70"
+     id="rect24" />
+  <text
+     class="h3"
+     x="556.98578"
+     y="525.01422"
+     id="text25">dreo_ha_to_mqtt.py</text>
+  <text
+     class="topic"
+     x="556.98578"
+     y="549.01422"
+     id="text26">publish iot/dreo_fan</text>
+  <rect
+     class="control"
+     x="534.98578"
+     y="619.01422"
+     width="320"
+     height="82"
+     id="rect26" />
+  <text
+     class="h3"
+     x="556.98578"
+     y="649.01422"
+     id="text27">control scripts</text>
+  <text
+     class="small"
+     x="556.98578"
+     y="673.01422"
+     id="text28">hue_control.py / dreo_fan_control.py</text>
+  <text
+     class="small"
+     x="556.98578"
+     y="693.01422"
+     id="text29">scheduled or random state switching</text>
+  <rect
+     class="broker"
+     x="960.98578"
+     y="305.01422"
+     width="250"
+     height="164"
+     id="rect29" />
+  <text
+     class="brokerText"
+     x="1085.9857"
+     y="351.01422"
+     text-anchor="middle"
+     id="text30">WSL MQTT Broker</text>
+  <text
+     class="brokerSmall"
+     x="1085.9857"
+     y="383.01422"
+     text-anchor="middle"
+     id="text31">Mosquitto</text>
+  <text
+     class="brokerSmall"
+     x="1085.9857"
+     y="411.01422"
+     text-anchor="middle"
+     id="text32">172.24.224.223 : 1883</text>
+  <text
+     class="brokerSmall"
+     x="1085.9857"
+     y="439.01422"
+     text-anchor="middle"
+     id="text33">central pub/sub bus</text>
+  <rect
+     class="zone"
+     x="1266.9857"
+     y="121.01423"
+     width="300"
+     height="640"
+     id="rect33" />
+  <text
+     class="h2"
+     x="1294.9857"
+     y="159.01424"
+     id="text34">3. Subscribers</text>
+  <text
+     class="small"
+     x="1294.9857"
+     y="183.01424"
+     id="text35">aligned data and live detection</text>
+  <rect
+     class="collector"
+     x="1298.9857"
+     y="231.01424"
+     width="230"
+     height="96"
+     id="rect35" />
+  <text
+     class="h3"
+     x="1318.9857"
+     y="261.01422"
+     id="text36">collect_all_mqtt.py</text>
+  <text
+     class="small"
+     x="1318.9857"
+     y="286.01422"
+     id="text37">subscribes all telemetry topics</text>
+  <text
+     class="small"
+     x="1318.9857"
+     y="308.01422"
+     id="text38">writes aligned CSV at 1 Hz</text>
+  <rect
+     class="ids"
+     x="1298.9857"
+     y="391.01422"
+     width="230"
+     height="118"
+     id="rect38" />
+  <text
+     class="h3"
+     x="1318.9857"
+     y="421.01422"
+     id="text39">online IDS</text>
+  <text
+     class="small"
+     x="1318.9857"
+     y="446.01422"
+     id="text40">rolling_quantile / multistep</text>
+  <text
+     class="small"
+     x="1318.9857"
+     y="468.01422"
+     id="text41">subscribes live telemetry</text>
+  <text
+     class="small"
+     x="1318.9857"
+     y="490.01422"
+     id="text42">publishes alert topic</text>
+  <rect
+     class="control"
+     x="1298.9857"
+     y="579.01422"
+     width="230"
+     height="86"
+     id="rect42" />
+  <text
+     class="h3"
+     x="1318.9857"
+     y="609.01422"
+     id="text43">outputs</text>
+  <text
+     class="small"
+     x="1318.9857"
+     y="633.01422"
+     id="text44">CSV dataset and online log</text>
+  <text
+     class="small"
+     x="1318.9857"
+     y="655.01422"
+     id="text45">normal or anomaly alert</text>
+  <path
+     class="arrow"
+     d="m 408.98577,258.01423 c 53,0 68,-14 126,-14"
+     id="path45" />
+  <path
+     class="arrow"
+     d="m 408.98577,374.01423 c 53,0 68,-34 126,-34"
+     id="path46" />
+  <path
+     class="arrow"
+     d="m 408.98577,490.01423 c 53,0 68,-54 126,-54"
+     id="path47" />
+  <path
+     class="arrow"
+     d="m 408.98577,606.01423 c 53,0 68,-74 126,-74"
+     id="path48" />
+  <path
+     class="arrowPub"
+     d="m 854.98577,244.01423 c 57,0 65,84 106,103"
+     id="path49" />
+  <path
+     class="arrowPub"
+     d="m 854.98577,340.01423 c 57,0 65,23 106,35"
+     id="path50" />
+  <path
+     class="arrowPub"
+     d="m 854.98577,436.01423 c 57,0 65,-25 106,-33"
+     id="path51" />
+  <path
+     class="arrowPub"
+     d="m 854.98577,532.01423 c 57,0 65,-84 106,-101"
+     id="path52" />
+  <path
+     class="arrowSub"
+     d="m 1210.9858,355.01423 c 38,0 44,-76 88,-76"
+     id="path53" />
+  <path
+     class="arrowSub"
+     d="m 1210.9858,419.01423 c 38,0 44,30 88,30"
+     id="path54" />
+  <path
+     class="arrowPub dash"
+     d="m 1414.9858,509.01423 c 0,32 0,38 0,70"
+     id="path55" />
+  <path
+     class="arrowCtl"
+     d="m 532.58607,639.19907 c 0,-23.05552 -77.99664,-190.20799 -122.56615,-235.35836"
+     id="path56" />
+  <path
+     class="arrowCtl"
+     d="m 533.14749,673.31201 c 0,-67.86124 -82.21545,17.00457 -122.17061,-51.19695"
+     id="path57" />
+  <rect
+     class="badge"
+     x="84.985771"
+     y="789.01422"
+     width="86"
+     height="34"
+     id="rect58" />
+  <text
+     class="badgeText"
+     x="127.98577"
+     y="812.01422"
+     text-anchor="middle"
+     id="text58">Topics</text>
+  <text
+     class="topic"
+     x="190.98576"
+     y="812.01422"
+     id="text59">iot/arduino, iot/light_state, iot/tapo_p110, iot/dreo_fan, iot/rolling_quantile_gnn_gru_ids_alert</text>
+  <text
+     class="badgeText"
+     x="127.98577"
+     y="854.01422"
+     text-anchor="middle"
+     id="text60">Scope</text>
 </svg>
