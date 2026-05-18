@@ -16,6 +16,7 @@ Detailed comparison:
 - `docs/model_versions_comparison.md`
 - `docs/rolling_multistep_gnn_gru_ids_summary.md`
 - `docs/rolling_quantile_gnn_gru_ids_summary.md`
+- `docs/experimental_environment_architecture.md`
 
 ## Dataset
 
