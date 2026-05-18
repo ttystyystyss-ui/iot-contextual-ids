@@ -4,6 +4,10 @@ This diagram summarizes the deployed IoT IDS testbed rather than the internal GA
 
 ![MQTT IoT Contextual IDS experimental environment](figures/experimental_environment_architecture.svg)
 
+## Physical Bench Photo
+
+![Physical IoT IDS experimental bench](figures/experimental_bench_photo.jpg)
+
 ## Flow
 
 1. Physical devices on the bench produce sensor, state, and power data.
