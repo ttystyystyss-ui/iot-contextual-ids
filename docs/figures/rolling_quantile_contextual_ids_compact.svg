@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .outer { fill: #fff; stroke: #102a63; stroke-width: 2.2; rx: 18; }
+      .panel { fill: #fff; stroke: #244f9e; stroke-width: 1.8; rx: 14; }
+      .panelGreen { fill: #fbfffc; stroke: #207a34; stroke-width: 1.8; rx: 14; }
+      .panelPurple { fill: #fffaff; stroke: #5f35b1; stroke-width: 1.8; rx: 14; }
+      .title { font-family: Arial, Helvetica, sans-serif; font-size: 40px; font-weight: 800; fill: #102a63; }
+      .subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 16px; fill: #52617a; }
+      .h2 { font-family: Arial, Helvetica, sans-serif; font-size: 23px; font-weight: 800; fill: #102a63; }
+      .h2Green { font-family: Arial, Helvetica, sans-serif; font-size: 23px; font-weight: 800; fill: #136626; }
+      .h3 { font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 800; fill: #1c2740; }
+      .txt { font-family: Arial, Helvetica, sans-serif; font-size: 15px; fill: #1c2740; }
+      .small { font-family: Arial, Helvetica, sans-serif; font-size: 13px; fill: #52617a; }
+      .tiny { font-family: Arial, Helvetica, sans-serif; font-size: 12px; fill: #52617a; }
+      .mono { font-family: "Courier New", monospace; font-size: 13px; fill: #17233d; }
+      .nodeText { font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: 800; fill: #102a63; }
+      .boxBlue { fill: #f1f6ff; stroke: #2864c8; stroke-width: 1.6; rx: 9; }
+      .boxOrange { fill: #fff7ed; stroke: #e17a18; stroke-width: 1.6; rx: 9; }
+      .boxGreen { fill: #eefaf0; stroke: #207a34; stroke-width: 1.6; rx: 9; }
+      .boxPurple { fill: #f5efff; stroke: #5f35b1; stroke-width: 1.6; rx: 9; }
+      .boxRed { fill: #fff3f3; stroke: #d21e22; stroke-width: 1.6; rx: 9; }
+      .arrow { fill: none; stroke: #102a63; stroke-width: 3; marker-end: url(#arrow); }
+      .arrowGreen { fill: none; stroke: #207a34; stroke-width: 3; marker-end: url(#arrowGreen); }
+      .arrowRed { fill: none; stroke: #d21e22; stroke-width: 3; marker-end: url(#arrowRed); }
+      .edge { fill: none; stroke: #111; stroke-width: 2; marker-end: url(#arrowBlack); }
+      .dash { stroke-dasharray: 6 6; }
+      .tableLine { stroke: #9fb0cf; stroke-width: 1; }
+      .tableHead { fill: #102a63; }
+      .headText { font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: 800; fill: #fff; }
+      .chip { fill: #fff; stroke: #244f9e; stroke-width: 1.2; rx: 6; }
+      .chipText { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 800; fill: #102a63; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#102a63"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#207a34"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#d21e22"/>
+    </marker>
+    <marker id="arrowBlack" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="900"/>
+  <rect class="outer" x="16" y="16" width="1568" height="868"/>
+  <text class="title" x="800" y="64" text-anchor="middle">Rolling Quantile GAT-GRU Contextual IDS</text>
+  <text class="subtitle" x="800" y="94" text-anchor="middle">Compact vector summary: delay basis, target construction, model flow, and online anomaly decision</text>
+
+  <!-- Delay and target processing -->
+  <rect class="panel" x="42" y="122" width="718" height="260"/>
+  <text class="h2" x="68" y="158">1. Delay Basis and Target Construction</text>
+
+  <rect x="68" y="178" width="310" height="164" fill="#fff" stroke="#244f9e" stroke-width="1.3" rx="8"/>
+  <rect class="tableHead" x="68" y="178" width="310" height="30"/>
+  <text class="headText" x="96" y="198">Relation</text>
+  <text class="headText" x="224" y="198">P90</text>
+  <text class="headText" x="303" y="198">Safe window</text>
+  <line class="tableLine" x1="196" y1="178" x2="196" y2="342"/>
+  <line class="tableLine" x1="266" y1="178" x2="266" y2="342"/>
+  <line class="tableLine" x1="68" y1="236" x2="378" y2="236"/>
+  <line class="tableLine" x1="68" y1="264" x2="378" y2="264"/>
+  <line class="tableLine" x1="68" y1="292" x2="378" y2="292"/>
+  <text class="txt" x="82" y="226">light -> ambient_light</text>
+  <text class="txt" x="214" y="226">1.009s</text>
+  <text class="txt" x="298" y="226">3s</text>
+  <text class="txt" x="82" y="254">light -> total_power_w</text>
+  <text class="txt" x="214" y="254">3.004s</text>
+  <text class="txt" x="298" y="254">5s</text>
+  <text class="txt" x="82" y="282">fan -> total_power_w</text>
+  <text class="txt" x="214" y="282">3.003s</text>
+  <text class="txt" x="298" y="282">5s</text>
+  <text class="txt" x="82" y="310">fan -> temperature</text>
+  <text class="txt" x="214" y="310">42.45s</text>
+  <text class="txt" x="288" y="310">future work</text>
+
+  <rect x="420" y="178" width="300" height="164" fill="#fff" stroke="#244f9e" stroke-width="1.3" rx="8"/>
+  <rect class="tableHead" x="420" y="178" width="300" height="30"/>
+  <text class="headText" x="444" y="198">MQTT topic</text>
+  <text class="headText" x="562" y="198">Aligned 1s CSV input</text>
+  <line class="tableLine" x1="542" y1="178" x2="542" y2="342"/>
+  <line class="tableLine" x1="420" y1="236" x2="720" y2="236"/>
+  <line class="tableLine" x1="420" y1="264" x2="720" y2="264"/>
+  <line class="tableLine" x1="420" y1="292" x2="720" y2="292"/>
+  <text class="txt" x="438" y="226" fill="#d56600">Arduino</text>
+  <text class="txt" x="556" y="226">ambient_light</text>
+  <text class="txt" x="438" y="254" fill="#136626">Hue</text>
+  <text class="txt" x="556" y="254">light_state</text>
+  <text class="txt" x="438" y="282" fill="#1f4ed8">Dreo</text>
+  <text class="txt" x="556" y="282">fan_state</text>
+  <text class="txt" x="438" y="310" fill="#5f35b1">Tapo P110</text>
+  <text class="txt" x="556" y="310">total_power_w</text>
+  <text class="small" x="432" y="362">Target: median(t+3,t+4,t+5) - current; skip samples with future 5s state transition.</text>
+
+  <rect class="panel" x="790" y="122" width="768" height="260"/>
+  <text class="h2" x="816" y="158">2. Model Architecture</text>
+
+  <circle cx="870" cy="226" r="26" fill="#c9f2ce" stroke="#207a34" stroke-width="2"/>
+  <circle cx="870" cy="306" r="26" fill="#cfe0ff" stroke="#2864c8" stroke-width="2"/>
+  <circle cx="1010" cy="226" r="26" fill="#ffd9b8" stroke="#e17a18" stroke-width="2"/>
+  <circle cx="1010" cy="306" r="26" fill="#decfff" stroke="#5f35b1" stroke-width="2"/>
+  <text class="nodeText" x="870" y="235" text-anchor="middle">L</text>
+  <text class="nodeText" x="870" y="315" text-anchor="middle">F</text>
+  <text class="nodeText" x="1010" y="235" text-anchor="middle">A</text>
+  <text class="nodeText" x="1010" y="315" text-anchor="middle">P</text>
+  <text class="tiny" x="833" y="265">light_state</text>
+  <text class="tiny" x="835" y="345">fan_state</text>
+  <text class="tiny" x="974" y="265">ambient_light</text>
+  <text class="tiny" x="974" y="345">total_power_w</text>
+  <path class="edge" d="M896 226 L984 226"/>
+  <path class="edge" d="M890 247 L990 286"/>
+  <path class="edge" d="M896 306 L984 306"/>
+  <path class="edge dash" d="M844 226 C824 210 824 194 846 190"/>
+  <path class="edge dash" d="M844 306 C824 290 824 274 846 270"/>
+  <path class="edge dash" d="M1036 226 C1058 210 1058 194 1036 190"/>
+  <path class="edge dash" d="M1036 306 C1058 290 1058 274 1036 270"/>
+  <text class="small" x="844" y="368">Directed edges + self-loops</text>
+
+  <rect class="boxBlue" x="1094" y="190" width="96" height="112"/>
+  <text class="h3" x="1142" y="224" text-anchor="middle">Input</text>
+  <text class="small" x="1142" y="252" text-anchor="middle">10 steps</text>
+  <text class="small" x="1142" y="274" text-anchor="middle">4 nodes</text>
+  <path class="arrow" d="M1190 246 L1220 246"/>
+
+  <rect class="boxOrange" x="1220" y="190" width="110" height="112"/>
+  <text class="h3" x="1275" y="224" text-anchor="middle">GAT</text>
+  <text class="small" x="1275" y="252" text-anchor="middle">spatial</text>
+  <text class="small" x="1275" y="274" text-anchor="middle">attention</text>
+  <path class="arrow" d="M1330 246 L1360 246"/>
+
+  <rect class="boxGreen" x="1360" y="190" width="110" height="112"/>
+  <text class="h3" x="1415" y="224" text-anchor="middle">GRU</text>
+  <text class="small" x="1415" y="252" text-anchor="middle">10s temporal</text>
+  <text class="small" x="1415" y="274" text-anchor="middle">memory</text>
+  <path class="arrow" d="M1470 246 L1500 246"/>
+
+  <rect class="boxPurple" x="1500" y="190" width="42" height="112"/>
+  <text class="h3" x="1521" y="240" text-anchor="middle">Q</text>
+  <text class="small" x="1521" y="266" text-anchor="middle">head</text>
+
+  <rect class="boxPurple" x="1094" y="318" width="448" height="44"/>
+  <text class="small" x="1318" y="345" text-anchor="middle">Rolling context: last_off_ambient_median is concatenated before quantile prediction.</text>
+
+  <!-- Online detection -->
+  <rect class="panelGreen" x="42" y="412" width="940" height="344"/>
+  <text class="h2Green" x="68" y="448">3. Online Detection Flow</text>
+
+  <rect class="boxGreen" x="78" y="490" width="180" height="96"/>
+  <text class="h3" x="168" y="520" text-anchor="middle">Build context</text>
+  <text class="small" x="168" y="546" text-anchor="middle">stream 1s MQTT data</text>
+  <text class="small" x="168" y="568" text-anchor="middle">keep 10s window</text>
+  <path class="arrowGreen" d="M258 538 L306 538"/>
+
+  <rect class="boxGreen" x="306" y="490" width="190" height="96"/>
+  <text class="h3" x="401" y="520" text-anchor="middle">Predict interval</text>
+  <text class="small" x="401" y="546" text-anchor="middle">P10 / P50 / P90</text>
+  <text class="small" x="401" y="568" text-anchor="middle">per response variable</text>
+  <path class="arrowGreen" d="M496 538 L544 538"/>
+
+  <rect class="boxGreen" x="544" y="490" width="220" height="96"/>
+  <text class="h3" x="654" y="520" text-anchor="middle">Wait future 5s</text>
+  <text class="small" x="654" y="546" text-anchor="middle">actual response = median</text>
+  <text class="small" x="654" y="568" text-anchor="middle">future values - current</text>
+
+  <path class="arrowGreen" d="M401 586 L401 636"/>
+  <path class="arrowGreen" d="M654 586 L654 636"/>
+  <path class="arrowGreen" d="M401 636 L292 636 L292 674"/>
+  <path class="arrowRed" d="M654 636 L764 636 L764 674"/>
+
+  <rect class="boxGreen" x="178" y="674" width="230" height="72"/>
+  <text class="h3" x="293" y="704" text-anchor="middle">Inside P10-P90</text>
+  <text class="h3" x="293" y="730" text-anchor="middle">Normal</text>
+
+  <rect class="boxRed" x="650" y="674" width="230" height="72"/>
+  <text class="h3" x="765" y="704" text-anchor="middle" fill="#d21e22">Outside P10-P90</text>
+  <text class="h3" x="765" y="730" text-anchor="middle" fill="#d21e22">Anomaly / Alert</text>
+
+  <rect class="panelPurple" x="1010" y="412" width="548" height="344"/>
+  <text class="h2" x="1038" y="448">4. Outputs and Scope</text>
+  <rect class="boxOrange" x="1050" y="492" width="218" height="90"/>
+  <text class="h3" x="1159" y="524" text-anchor="middle">ambient_light</text>
+  <rect class="chip" x="1086" y="544" width="48" height="26"/><text class="chipText" x="1110" y="562" text-anchor="middle">P10</text>
+  <rect class="chip" x="1138" y="544" width="48" height="26"/><text class="chipText" x="1162" y="562" text-anchor="middle">P50</text>
+  <rect class="chip" x="1190" y="544" width="48" height="26"/><text class="chipText" x="1214" y="562" text-anchor="middle">P90</text>
+  <rect class="boxPurple" x="1300" y="492" width="218" height="90"/>
+  <text class="h3" x="1409" y="524" text-anchor="middle">total_power_w</text>
+  <rect class="chip" x="1336" y="544" width="48" height="26"/><text class="chipText" x="1360" y="562" text-anchor="middle">P10</text>
+  <rect class="chip" x="1388" y="544" width="48" height="26"/><text class="chipText" x="1412" y="562" text-anchor="middle">P50</text>
+  <rect class="chip" x="1440" y="544" width="48" height="26"/><text class="chipText" x="1464" y="562" text-anchor="middle">P90</text>
+
+  <text class="txt" x="1056" y="630">Model excludes the temperature node in the current implementation.</text>
+  <text class="txt" x="1056" y="660">Temperature appears in measured delay analysis and future work.</text>
+  <text class="txt" x="1056" y="690">Each prediction targets median(t+3,t+4,t+5) - current.</text>
+  <text class="txt" x="1056" y="720">Alert decision is made separately for each response variable.</text>
+
+  <text class="subtitle" x="800" y="830" text-anchor="middle">Compact view derived from the current code logic, measured delays, MQTT topic mapping, and online quantile detection rule.</text>
+</svg>

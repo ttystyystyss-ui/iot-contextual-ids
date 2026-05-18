@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="980" viewBox="0 0 1800 980">
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .outer { fill: #fff; stroke: #102a63; stroke-width: 2.2; rx: 18; }
+      .title { font-family: Arial, Helvetica, sans-serif; font-size: 44px; font-weight: 800; fill: #102a63; }
+      .subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 16px; fill: #52617a; }
+      .stage { fill: #fff; stroke-width: 1.7; rx: 14; }
+      .blue { stroke: #2864c8; }
+      .orange { stroke: #e17a18; }
+      .green { stroke: #207a34; }
+      .purple { stroke: #5f35b1; }
+      .red { stroke: #d21e22; }
+      .h2 { font-family: Arial, Helvetica, sans-serif; font-size: 21px; font-weight: 800; fill: #102a63; }
+      .h2Orange { font-family: Arial, Helvetica, sans-serif; font-size: 21px; font-weight: 800; fill: #9a4b00; }
+      .h2Green { font-family: Arial, Helvetica, sans-serif; font-size: 21px; font-weight: 800; fill: #136626; }
+      .h2Purple { font-family: Arial, Helvetica, sans-serif; font-size: 21px; font-weight: 800; fill: #3f1b88; }
+      .h2Red { font-family: Arial, Helvetica, sans-serif; font-size: 21px; font-weight: 800; fill: #b31518; }
+      .txt { font-family: Arial, Helvetica, sans-serif; font-size: 15px; fill: #17233d; }
+      .small { font-family: Arial, Helvetica, sans-serif; font-size: 13px; fill: #52617a; }
+      .mono { font-family: "Courier New", monospace; font-size: 14px; fill: #17233d; }
+      .formula { font-family: "Times New Roman", serif; font-size: 21px; fill: #17233d; font-style: italic; }
+      .nodeText { font-family: Arial, Helvetica, sans-serif; font-size: 23px; font-weight: 800; fill: #102a63; }
+      .box { fill: #fff; stroke: #b8c6df; stroke-width: 1.2; rx: 8; }
+      .boxBlue { fill: #f1f6ff; stroke: #2864c8; stroke-width: 1.4; rx: 8; }
+      .boxOrange { fill: #fff7ed; stroke: #e17a18; stroke-width: 1.4; rx: 8; }
+      .boxGreen { fill: #eefaf0; stroke: #207a34; stroke-width: 1.4; rx: 8; }
+      .boxPurple { fill: #f5efff; stroke: #5f35b1; stroke-width: 1.4; rx: 8; }
+      .boxRed { fill: #fff3f3; stroke: #d21e22; stroke-width: 1.4; rx: 8; }
+      .arrow { fill: none; stroke: #102a63; stroke-width: 4; marker-end: url(#arrow); }
+      .edge { fill: none; stroke: #111; stroke-width: 2; marker-end: url(#arrowBlack); }
+      .dash { stroke-dasharray: 6 6; }
+      .vecL { fill: #bdeac2; stroke: #207a34; }
+      .vecA { fill: #ffd6ad; stroke: #e17a18; }
+      .vecF { fill: #cfe0ff; stroke: #2864c8; }
+      .vecP { fill: #decfff; stroke: #5f35b1; }
+      .chipText { font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: 800; fill: #102a63; }
+      .bottomHead { font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 800; fill: #102a63; }
+    </style>
+    <marker id="arrow" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto">
+      <path d="M0,0 L11,4.5 L0,9 Z" fill="#102a63"/>
+    </marker>
+    <marker id="arrowBlack" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1800" height="980"/>
+  <rect class="outer" x="18" y="18" width="1764" height="944"/>
+  <text class="title" x="900" y="68" text-anchor="middle">Model Layers - Rolling Quantile GAT-GRU</text>
+  <text class="subtitle" x="900" y="96" text-anchor="middle">Compact vector layer view retaining graph structure, dimensions, context feature, quantile transform, and output semantics</text>
+
+  <!-- Stage 1 -->
+  <rect class="stage blue" x="40" y="128" width="205" height="560"/>
+  <text class="h2" x="62" y="165">1. Input Sequence</text>
+  <text class="txt" x="142" y="198" text-anchor="middle">10 time steps</text>
+  <text class="small" x="142" y="222" text-anchor="middle">4 nodes per time step</text>
+  <rect class="boxBlue" x="66" y="252" width="152" height="176"/>
+  <circle cx="104" cy="300" r="22" class="vecL"/><text class="nodeText" x="104" y="308" text-anchor="middle">L</text>
+  <circle cx="180" cy="300" r="22" class="vecA"/><text class="nodeText" x="180" y="308" text-anchor="middle">A</text>
+  <circle cx="104" cy="380" r="22" class="vecF"/><text class="nodeText" x="104" y="388" text-anchor="middle">F</text>
+  <circle cx="180" cy="380" r="22" class="vecP"/><text class="nodeText" x="180" y="388" text-anchor="middle">P</text>
+  <path class="edge" d="M126 300 L158 300"/>
+  <path class="edge" d="M118 318 L166 362"/>
+  <path class="edge" d="M126 380 L158 380"/>
+  <text class="small" x="142" y="456" text-anchor="middle">node features</text>
+  <rect class="box" x="72" y="474" width="140" height="42"/>
+  <text class="mono" x="142" y="501" text-anchor="middle">value, delta, age, type</text>
+  <text class="formula" x="142" y="584" text-anchor="middle">X in R<tspan baseline-shift="super" font-size="13">10 x 4 x 4</tspan></text>
+
+  <path class="arrow" d="M245 408 L277 408"/>
+
+  <!-- Stage 2 -->
+  <rect class="stage orange" x="278" y="128" width="230" height="560"/>
+  <text class="h2Orange" x="300" y="165">2. GAT Spatial Layer</text>
+  <text class="txt" x="393" y="198" text-anchor="middle">process one graph per second</text>
+  <circle cx="342" cy="266" r="21" class="vecL"/><text class="nodeText" x="342" y="274" text-anchor="middle">L</text>
+  <circle cx="438" cy="266" r="21" class="vecA"/><text class="nodeText" x="438" y="274" text-anchor="middle">A</text>
+  <circle cx="342" cy="346" r="21" class="vecF"/><text class="nodeText" x="342" y="354" text-anchor="middle">F</text>
+  <circle cx="438" cy="346" r="21" class="vecP"/><text class="nodeText" x="438" y="354" text-anchor="middle">P</text>
+  <path class="edge" d="M363 266 L417 266"/>
+  <path class="edge" d="M357 282 L423 330"/>
+  <path class="edge" d="M363 346 L417 346"/>
+  <path class="edge dash" d="M459 266 L459 326"/>
+  <text class="small" x="305" y="416">node projection: Linear(4 -> 16)</text>
+  <text class="small" x="305" y="444">attention score: concat dim 32 -> 1</text>
+  <text class="small" x="305" y="472">softmax over incoming edges</text>
+  <text class="small" x="305" y="500">weighted aggregation on directed edges</text>
+  <rect class="boxOrange" x="318" y="548" width="150" height="70"/>
+  <text class="small" x="393" y="576" text-anchor="middle">output per step</text>
+  <text class="formula" x="393" y="604" text-anchor="middle">H<tspan baseline-shift="super" font-size="13">gat</tspan><tspan font-size="17"> in R</tspan><tspan baseline-shift="super" font-size="13">4 x 16</tspan></text>
+
+  <path class="arrow" d="M508 408 L540 408"/>
+
+  <!-- Stage 3 -->
+  <rect class="stage green" x="540" y="128" width="195" height="560"/>
+  <text class="h2Green" x="562" y="165">3. Node Projector</text>
+  <text class="small" x="638" y="204" text-anchor="middle">shared MLP across nodes</text>
+  <rect class="boxGreen" x="584" y="246" width="108" height="42"/>
+  <text class="txt" x="638" y="273" text-anchor="middle">ReLU</text>
+  <path class="edge" d="M638 288 L638 324"/>
+  <rect class="boxGreen" x="584" y="324" width="108" height="42"/>
+  <text class="txt" x="638" y="351" text-anchor="middle">Linear 16 -> 16</text>
+  <path class="edge" d="M638 366 L638 402"/>
+  <rect class="boxGreen" x="584" y="402" width="108" height="42"/>
+  <text class="txt" x="638" y="429" text-anchor="middle">ReLU</text>
+  <rect class="boxGreen" x="572" y="548" width="132" height="70"/>
+  <text class="small" x="638" y="576" text-anchor="middle">projected nodes</text>
+  <text class="formula" x="638" y="604" text-anchor="middle">H<tspan baseline-shift="super" font-size="13">proj</tspan><tspan font-size="17"> in R</tspan><tspan baseline-shift="super" font-size="13">4 x 16</tspan></text>
+
+  <path class="arrow" d="M735 408 L767 408"/>
+
+  <!-- Stage 4 -->
+  <rect class="stage blue" x="767" y="128" width="205" height="560"/>
+  <text class="h2" x="790" y="165">4. Flatten Nodes</text>
+  <text class="small" x="870" y="204" text-anchor="middle">concat 4 node embeddings</text>
+  <text class="small" x="870" y="226" text-anchor="middle">16 dims per node</text>
+  <text class="chipText" x="806" y="282">L</text><rect class="vecL" x="830" y="264" width="96" height="18"/>
+  <text class="chipText" x="806" y="332">A</text><rect class="vecA" x="830" y="314" width="96" height="18"/>
+  <text class="chipText" x="806" y="382">F</text><rect class="vecF" x="830" y="364" width="96" height="18"/>
+  <text class="chipText" x="806" y="432">P</text><rect class="vecP" x="830" y="414" width="96" height="18"/>
+  <path class="edge" d="M878 444 L878 486"/>
+  <rect class="vecL" x="808" y="498" width="36" height="18"/>
+  <rect class="vecA" x="844" y="498" width="36" height="18"/>
+  <rect class="vecF" x="880" y="498" width="36" height="18"/>
+  <rect class="vecP" x="916" y="498" width="36" height="18"/>
+  <text class="formula" x="870" y="582" text-anchor="middle">Z in R<tspan baseline-shift="super" font-size="13">10 x 64</tspan></text>
+  <text class="small" x="870" y="614" text-anchor="middle">4 x 16 = 64 features per second</text>
+
+  <path class="arrow" d="M972 408 L1004 408"/>
+
+  <!-- Stage 5 -->
+  <rect class="stage purple" x="1004" y="128" width="250" height="560"/>
+  <text class="h2Purple" x="1026" y="165">5. GRU Temporal Encoder</text>
+  <text class="small" x="1129" y="204" text-anchor="middle">input size 64, hidden size 64</text>
+  <text class="small" x="1129" y="226" text-anchor="middle">num_layers = 1</text>
+  <rect class="boxPurple" x="1060" y="276" width="52" height="34"/><text class="txt" x="1086" y="299" text-anchor="middle">GRU</text>
+  <rect class="boxPurple" x="1144" y="276" width="52" height="34"/><text class="txt" x="1170" y="299" text-anchor="middle">GRU</text>
+  <path class="edge" d="M1112 293 L1144 293"/>
+  <rect class="boxPurple" x="1060" y="356" width="52" height="34"/><text class="txt" x="1086" y="379" text-anchor="middle">GRU</text>
+  <rect class="boxPurple" x="1144" y="356" width="52" height="34"/><text class="txt" x="1170" y="379" text-anchor="middle">GRU</text>
+  <path class="edge" d="M1112 373 L1144 373"/>
+  <rect class="boxPurple" x="1060" y="456" width="52" height="34"/><text class="txt" x="1086" y="479" text-anchor="middle">GRU</text>
+  <rect class="boxPurple" x="1144" y="456" width="52" height="34"/><text class="txt" x="1170" y="479" text-anchor="middle">GRU</text>
+  <path class="edge" d="M1112 473 L1144 473"/>
+  <text class="small" x="1034" y="298">t-9</text>
+  <text class="small" x="1034" y="378">t-8</text>
+  <text class="small" x="1040" y="438">...</text>
+  <text class="small" x="1043" y="478">t</text>
+  <rect class="vecP" x="1076" y="548" width="108" height="20"/>
+  <text class="formula" x="1129" y="615" text-anchor="middle">h<tspan baseline-shift="sub" font-size="13">t</tspan><tspan font-size="17"> in R</tspan><tspan baseline-shift="super" font-size="13">64</tspan></text>
+
+  <path class="arrow" d="M1254 408 L1286 408"/>
+
+  <!-- Stage 6 -->
+  <rect class="stage red" x="1286" y="128" width="170" height="560"/>
+  <text class="h2Red" x="1308" y="165">6. Context Concat</text>
+  <text class="small" x="1371" y="206" text-anchor="middle">context scalar</text>
+  <rect class="boxRed" x="1312" y="232" width="118" height="54"/>
+  <text class="mono" x="1371" y="256" text-anchor="middle">last_off</text>
+  <text class="mono" x="1371" y="276" text-anchor="middle">ambient_median</text>
+  <path class="edge" d="M1371 286 L1371 438"/>
+  <rect class="vecP" x="1320" y="506" width="92" height="20"/>
+  <rect class="boxRed" x="1418" y="502" width="18" height="28"/>
+  <text class="small" x="1371" y="566" text-anchor="middle">concatenate [h_t ; context]</text>
+  <text class="formula" x="1371" y="615" text-anchor="middle">R<tspan baseline-shift="super" font-size="13">64</tspan> + R<tspan baseline-shift="super" font-size="13">1</tspan> = R<tspan baseline-shift="super" font-size="13">65</tspan></text>
+
+  <path class="arrow" d="M1456 408 L1488 408"/>
+
+  <!-- Stage 7 -->
+  <rect class="stage orange" x="1488" y="128" width="190" height="560"/>
+  <text class="h2Orange" x="1510" y="165">7. Quantile Head</text>
+  <rect class="boxOrange" x="1520" y="218" width="126" height="38"/><text class="txt" x="1583" y="243" text-anchor="middle">Linear 65 -> 64</text>
+  <path class="edge" d="M1583 256 L1583 288"/>
+  <rect class="boxOrange" x="1520" y="288" width="126" height="38"/><text class="txt" x="1583" y="313" text-anchor="middle">ReLU</text>
+  <path class="edge" d="M1583 326 L1583 358"/>
+  <rect class="boxOrange" x="1520" y="358" width="126" height="38"/><text class="txt" x="1583" y="383" text-anchor="middle">Dropout 0.3</text>
+  <path class="edge" d="M1583 396 L1583 428"/>
+  <rect class="boxOrange" x="1520" y="428" width="126" height="38"/><text class="txt" x="1583" y="453" text-anchor="middle">Linear 64 -> 6</text>
+  <rect class="boxOrange" x="1510" y="512" width="146" height="116"/>
+  <text class="small" x="1583" y="536" text-anchor="middle">monotonic quantiles</text>
+  <text class="small" x="1583" y="562" text-anchor="middle">P10 = center - softplus(w_low)</text>
+  <text class="small" x="1583" y="586" text-anchor="middle">P50 = center</text>
+  <text class="small" x="1583" y="610" text-anchor="middle">P90 = center + softplus(w_high)</text>
+
+  <path class="arrow" d="M1678 408 L1710 408"/>
+
+  <!-- Stage 8 -->
+  <rect class="stage blue" x="1710" y="128" width="64" height="560"/>
+  <text class="h2" x="1742" y="165" text-anchor="middle">8</text>
+  <text class="small" x="1742" y="202" text-anchor="middle">Output</text>
+  <rect class="boxOrange" x="1720" y="250" width="44" height="112"/>
+  <text class="small" x="1742" y="282" text-anchor="middle">amb</text>
+  <text class="chipText" x="1742" y="312" text-anchor="middle">P10</text>
+  <text class="chipText" x="1742" y="338" text-anchor="middle">P50</text>
+  <text class="chipText" x="1742" y="364" text-anchor="middle">P90</text>
+  <rect class="boxPurple" x="1720" y="414" width="44" height="112"/>
+  <text class="small" x="1742" y="446" text-anchor="middle">pwr</text>
+  <text class="chipText" x="1742" y="476" text-anchor="middle">P10</text>
+  <text class="chipText" x="1742" y="502" text-anchor="middle">P50</text>
+  <text class="chipText" x="1742" y="528" text-anchor="middle">P90</text>
+  <text class="small" x="1742" y="592" text-anchor="middle">2 vars x</text>
+  <text class="small" x="1742" y="614" text-anchor="middle">3 quantiles</text>
+
+  <!-- Bottom reference strip -->
+  <rect class="boxBlue" x="40" y="724" width="1720" height="178"/>
+  <text class="bottomHead" x="78" y="760">Graph and Feature Summary</text>
+  <text class="txt" x="78" y="794">Nodes: L = light_state, F = fan_state, A = ambient_light, P = total_power_w.</text>
+  <text class="txt" x="78" y="824">Edges per time step: L -> A, L -> P, F -> P, plus self-loops on all nodes.</text>
+  <text class="txt" x="78" y="854">Feature vector per node: value, delta from previous value, age since last update, node type one-hot summary.</text>
+
+  <text class="bottomHead" x="742" y="760">Temporal Target</text>
+  <text class="txt" x="742" y="794">Past input window: 10s, from t-9 to t at 1s resolution.</text>
+  <text class="txt" x="742" y="824">Future horizon: t+1 to t+5; response = median(t+3,t+4,t+5) - current.</text>
+  <text class="txt" x="742" y="854">Samples with future state transitions are skipped for clean normal-response targets.</text>
+
+  <text class="bottomHead" x="1274" y="760">Dimensions</text>
+  <text class="txt" x="1274" y="794">Input: R^10x4x4; GAT/projector output: R^4x16 per step.</text>
+  <text class="txt" x="1274" y="824">Flattened sequence: R^10x64; GRU hidden: R^64; after context: R^65.</text>
+  <text class="txt" x="1274" y="854">Quantile head output: R^6 for ambient_light and total_power_w.</text>
+
+  <text class="subtitle" x="900" y="936" text-anchor="middle">Temperature is excluded from the current model; it remains part of measured delay analysis and future work.</text>
+</svg>
