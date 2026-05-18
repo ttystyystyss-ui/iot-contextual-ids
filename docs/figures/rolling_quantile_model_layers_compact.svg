@@ -1,104 +1,253 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1050" viewBox="0 0 1900 1050">
+<svg xmlns="http://www.w3.org/2000/svg" width="1980" height="1050" viewBox="0 0 1980 1050">
   <defs>
     <style>
-      .page{fill:#fff;stroke:#0b2b6f;stroke-width:2.4;rx:14}
-      .title{font-family:Arial,Helvetica,sans-serif;font-size:44px;font-weight:800;fill:#0b2b6f}
-      .card{fill:#fff;stroke-width:1.7;rx:10}.b{stroke:#1f55bd}.o{stroke:#f06c00}.g{stroke:#1d7a34}.p{stroke:#6b39c8}.r{stroke:#df1f26}
-      .badge{rx:15}.badgeText{font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:800;fill:white}
-      .h{font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:800;fill:#0b2b6f}.ho{font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:800;fill:#a14b00}.hg{font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:800;fill:#117025}.hp{font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:800;fill:#3f1b88}.hr{font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:800;fill:#b31518}
-      .t{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#111827}.s{font-family:Arial,Helvetica,sans-serif;font-size:12px;fill:#374151}.m{font-family:"Courier New",monospace;font-size:13px;fill:#111827}.f{font-family:"Times New Roman",serif;font-size:22px;fill:#111827;font-style:italic}
-      .box{fill:#fff;stroke:#9fb0cf;stroke-width:1.1;rx:7}.boxB{fill:#f8fbff;stroke:#1f55bd;stroke-width:1.3;rx:7}.boxO{fill:#fffaf4;stroke:#f06c00;stroke-width:1.3;rx:7}.boxG{fill:#fbfffc;stroke:#1d7a34;stroke-width:1.3;rx:7}.boxP{fill:#fbf8ff;stroke:#6b39c8;stroke-width:1.3;rx:7}.boxR{fill:#fffafa;stroke:#df1f26;stroke-width:1.3;rx:7}
-      .arr{fill:none;stroke:#0b2b6f;stroke-width:4;marker-end:url(#arrow)}.edge{fill:none;stroke:#111;stroke-width:2;marker-end:url(#arrowBlack)}.dash{stroke-dasharray:6 5}
-      .nodeT{font-family:Arial,Helvetica,sans-serif;font-size:23px;font-weight:800;fill:#0b2b6f}
-      .vl{fill:#c9f2ce;stroke:#1d7a34}.vf{fill:#cfe0ff;stroke:#1f55bd}.va{fill:#ffd9b8;stroke:#f06c00}.vp{fill:#decfff;stroke:#6b39c8}
-      .strip{fill:#fff;stroke:#17449d;stroke-width:1.6;rx:10}.stripHead{font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:800;fill:#0b2b6f}
+      .page{fill:#fff;stroke:#0b2b6f;stroke-width:2.5;rx:14}
+      .title{font-family:Arial,Helvetica,sans-serif;font-size:45px;font-weight:800;fill:#0b2b6f}
+      .card{fill:#fff;stroke-width:1.8;rx:10}
+      .blue{stroke:#1f55bd}.orange{stroke:#f06c00}.green{stroke:#1d7a34}.purple{stroke:#6b39c8}.red{stroke:#df1f26}
+      .badgeText{font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:800;fill:#fff}
+      .h{font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:800}
+      .hb{fill:#0b2b6f}.ho{fill:#a14b00}.hg{fill:#117025}.hp{fill:#3f1b88}.hr{fill:#b31518}
+      .text{font-family:Arial,Helvetica,sans-serif;font-size:15px;fill:#111827}
+      .small{font-family:Arial,Helvetica,sans-serif;font-size:13px;fill:#374151}
+      .tiny{font-family:Arial,Helvetica,sans-serif;font-size:12px;fill:#374151}
+      .mono{font-family:"Courier New",monospace;font-size:13px;fill:#111827}
+      .formula{font-family:"Times New Roman",serif;font-size:22px;font-style:italic;fill:#111827}
+      .box{fill:#fff;stroke:#9fb0cf;stroke-width:1.1;rx:7}
+      .bb{fill:#f8fbff;stroke:#1f55bd;stroke-width:1.35;rx:7}
+      .bo{fill:#fffaf4;stroke:#f06c00;stroke-width:1.35;rx:7}
+      .bg{fill:#fbfffc;stroke:#1d7a34;stroke-width:1.35;rx:7}
+      .bp{fill:#fbf8ff;stroke:#6b39c8;stroke-width:1.35;rx:7}
+      .br{fill:#fffafa;stroke:#df1f26;stroke-width:1.35;rx:7}
+      .arrow{fill:none;stroke:#0b2b6f;stroke-width:4;marker-end:url(#arrow)}
+      .edge{fill:none;stroke:#111;stroke-width:2;marker-end:url(#arrowBlack)}
+      .loop{fill:none;stroke:#111;stroke-width:1.7;stroke-dasharray:6 5;marker-end:url(#arrowBlack)}
+      .nodeText{font-family:Arial,Helvetica,sans-serif;font-size:24px;font-weight:800;fill:#0b2b6f}
+      .nL{fill:#c9f2ce;stroke:#1d7a34}.nF{fill:#cfe0ff;stroke:#1f55bd}.nA{fill:#ffd9b8;stroke:#f06c00}.nP{fill:#decfff;stroke:#6b39c8}
+      .strip{fill:#fff;stroke:#17449d;stroke-width:1.7;rx:10}.stripHead{font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:800;fill:#0b2b6f}
+      .sep{stroke:#aebbd8;stroke-width:1.4}.bullet{fill:#0b2b6f}
     </style>
-    <marker id="arrow" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto"><path d="M0,0 L11,4.5 L0,9 Z" fill="#0b2b6f"/></marker>
-    <marker id="arrowBlack" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 Z" fill="#111"/></marker>
+    <marker id="arrow" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto">
+      <path d="M0,0 L11,4.5 L0,9 Z" fill="#0b2b6f"/>
+    </marker>
+    <marker id="arrowBlack" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#111"/>
+    </marker>
   </defs>
 
-  <rect class="page" x="8" y="8" width="1884" height="1034"/>
-  <text class="title" x="950" y="62" text-anchor="middle">Model Layers - Rolling Quantile GAT-GRU</text>
+  <rect class="page" x="8" y="8" width="1964" height="1034"/>
+  <text class="title" x="990" y="64" text-anchor="middle">Model Layers - Rolling Quantile GAT-GRU</text>
 
-  <!-- Cards -->
-  <rect class="card b" x="28" y="102" width="238" height="650"/><circle class="badge" cx="58" cy="132" r="18" fill="#0b4da2"/><text class="badgeText" x="58" y="139" text-anchor="middle">1</text><text class="h" x="86" y="140">Input Sequence</text>
-  <text class="t" x="147" y="186" text-anchor="middle" font-weight="800">10 time steps</text>
-  <rect class="boxB" x="64" y="220" width="166" height="190"/>
-  <text class="s" x="147" y="246" text-anchor="middle">t = t-9 ... t</text>
-  <circle cx="104" cy="294" r="22" class="vl"/><text class="nodeT" x="104" y="302" text-anchor="middle">L</text><circle cx="190" cy="294" r="22" class="va"/><text class="nodeT" x="190" y="302" text-anchor="middle">A</text>
-  <circle cx="104" cy="370" r="22" class="vf"/><text class="nodeT" x="104" y="378" text-anchor="middle">F</text><circle cx="190" cy="370" r="22" class="vp"/><text class="nodeT" x="190" y="378" text-anchor="middle">P</text>
-  <path class="edge" d="M126 294 L168 294"/><path class="edge" d="M120 312 L174 352"/><path class="edge" d="M126 370 L168 370"/>
-  <text class="t" x="147" y="452" text-anchor="middle" font-weight="800">Node features</text>
-  <rect class="box" x="58" y="474" width="178" height="42"/><text class="m" x="147" y="500" text-anchor="middle">value, delta, age, type</text>
-  <rect class="boxB" x="58" y="584" width="178" height="72"/><text class="s" x="147" y="612" text-anchor="middle">Input tensor</text><text class="f" x="147" y="640" text-anchor="middle">X in R<tspan baseline-shift="super" font-size="13">10 x 4 x 4</tspan></text>
+  <!-- 1 Input -->
+  <rect class="card blue" x="28" y="100" width="238" height="650"/>
+  <circle cx="58" cy="130" r="18" fill="#0b4da2"/><text class="badgeText" x="58" y="137" text-anchor="middle">1</text>
+  <text class="h hb" x="86" y="138">Input Sequence</text>
+  <text class="text" x="147" y="184" text-anchor="middle" font-weight="800">10 time steps</text>
+  <rect class="bb" x="64" y="216" width="166" height="190"/>
+  <text class="small" x="147" y="242" text-anchor="middle">t = t-9 ... t</text>
+  <circle cx="104" cy="292" r="22" class="nL"/><text class="nodeText" x="104" y="300" text-anchor="middle">L</text>
+  <circle cx="190" cy="292" r="22" class="nA"/><text class="nodeText" x="190" y="300" text-anchor="middle">A</text>
+  <circle cx="104" cy="370" r="22" class="nF"/><text class="nodeText" x="104" y="378" text-anchor="middle">F</text>
+  <circle cx="190" cy="370" r="22" class="nP"/><text class="nodeText" x="190" y="378" text-anchor="middle">P</text>
+  <path class="edge" d="M126 292 L168 292"/><path class="edge" d="M119 310 L174 352"/><path class="edge" d="M126 370 L168 370"/>
+  <path class="loop" d="M84 292 C58 270 58 250 86 247"/><path class="loop" d="M210 292 C236 270 236 250 208 247"/>
+  <path class="loop" d="M84 370 C58 348 58 328 86 325"/><path class="loop" d="M210 370 C236 348 236 328 208 325"/>
+  <text class="small" x="147" y="434" text-anchor="middle">4 nodes per time step</text>
+  <text class="text" x="147" y="468" text-anchor="middle" font-weight="800">Node features per node</text>
+  <rect class="box" x="58" y="488" width="178" height="38"/>
+  <line class="sep" x1="103" y1="488" x2="103" y2="526"/><line class="sep" x1="148" y1="488" x2="148" y2="526"/><line class="sep" x1="193" y1="488" x2="193" y2="526"/>
+  <text class="tiny" x="81" y="512" text-anchor="middle">value</text><text class="tiny" x="126" y="512" text-anchor="middle">delta</text><text class="tiny" x="171" y="512" text-anchor="middle">age_sec</text><text class="tiny" x="214" y="512" text-anchor="middle">type</text>
+  <text class="small" x="147" y="550" text-anchor="middle">= 4 dims</text>
+  <rect class="bb" x="58" y="604" width="178" height="70"/>
+  <text class="small" x="147" y="630" text-anchor="middle">Input tensor</text>
+  <text class="formula" x="147" y="658" text-anchor="middle">X in R<tspan baseline-shift="super" font-size="13">10 x 4 x 4</tspan></text>
 
-  <path class="arr" d="M266 427 L296 427"/>
-  <rect class="card o" x="296" y="102" width="252" height="650"/><circle class="badge" cx="326" cy="132" r="18" fill="#c56000"/><text class="badgeText" x="326" y="139" text-anchor="middle">2</text><text class="ho" x="354" y="140">GAT Spatial Layer</text>
-  <text class="t" x="422" y="186" text-anchor="middle">Process one time-step graph</text>
-  <circle cx="370" cy="270" r="22" class="vl"/><text class="nodeT" x="370" y="278" text-anchor="middle">L</text><circle cx="480" cy="270" r="22" class="va"/><text class="nodeT" x="480" y="278" text-anchor="middle">A</text>
-  <circle cx="370" cy="356" r="22" class="vf"/><text class="nodeT" x="370" y="364" text-anchor="middle">F</text><circle cx="480" cy="356" r="22" class="vp"/><text class="nodeT" x="480" y="364" text-anchor="middle">P</text>
-  <path class="edge" d="M392 270 L458 270"/><path class="edge" d="M388 288 L462 338"/><path class="edge" d="M392 356 L458 356"/><path class="edge dash" d="M503 270 L503 334"/>
-  <text class="s" x="330" y="448">Node projection: Linear(4 -> 16)</text><text class="s" x="330" y="476">Attention: concat dim 32 -> 1</text><text class="s" x="330" y="504">Softmax over incoming edges</text><text class="s" x="330" y="532">Weighted aggregation + self-loops</text>
-  <rect class="boxO" x="342" y="600" width="160" height="72"/><text class="s" x="422" y="628" text-anchor="middle">Output per step</text><text class="f" x="422" y="656" text-anchor="middle">H<tspan baseline-shift="super" font-size="13">gat</tspan> in R<tspan baseline-shift="super" font-size="13">4 x 16</tspan></text>
+  <path class="arrow" d="M266 425 L296 425"/>
 
-  <path class="arr" d="M548 427 L578 427"/>
-  <rect class="card g" x="578" y="102" width="196" height="650"/><circle class="badge" cx="608" cy="132" r="18" fill="#177236"/><text class="badgeText" x="608" y="139" text-anchor="middle">3</text><text class="hg" x="636" y="140">Node Projector</text>
-  <text class="s" x="676" y="198" text-anchor="middle">MLP shared across nodes</text>
-  <rect class="boxG" x="624" y="250" width="104" height="42"/><text class="t" x="676" y="277" text-anchor="middle">ReLU</text><path class="edge" d="M676 292 L676 330"/>
-  <rect class="boxG" x="614" y="330" width="124" height="42"/><text class="t" x="676" y="357" text-anchor="middle">Linear(16 -> 16)</text><path class="edge" d="M676 372 L676 410"/>
-  <rect class="boxG" x="624" y="410" width="104" height="42"/><text class="t" x="676" y="437" text-anchor="middle">ReLU</text>
-  <rect class="boxG" x="612" y="600" width="128" height="72"/><text class="s" x="676" y="628" text-anchor="middle">Output per step</text><text class="f" x="676" y="656" text-anchor="middle">R<tspan baseline-shift="super" font-size="13">4 x 16</tspan></text>
+  <!-- 2 GAT -->
+  <rect class="card orange" x="296" y="100" width="252" height="650"/>
+  <circle cx="326" cy="130" r="18" fill="#c56000"/><text class="badgeText" x="326" y="137" text-anchor="middle">2</text>
+  <text class="h ho" x="354" y="138">GAT Spatial Layer</text>
+  <text class="text" x="422" y="184" text-anchor="middle">Process one time step graph</text>
+  <circle cx="370" cy="270" r="22" class="nL"/><text class="nodeText" x="370" y="278" text-anchor="middle">L</text>
+  <circle cx="480" cy="270" r="22" class="nA"/><text class="nodeText" x="480" y="278" text-anchor="middle">A</text>
+  <circle cx="370" cy="356" r="22" class="nF"/><text class="nodeText" x="370" y="364" text-anchor="middle">F</text>
+  <circle cx="480" cy="356" r="22" class="nP"/><text class="nodeText" x="480" y="364" text-anchor="middle">P</text>
+  <path class="edge" d="M392 270 L458 270"/><path class="edge" d="M388 288 L462 338"/><path class="edge" d="M392 356 L458 356"/><path class="edge" d="M480 292 L480 334"/>
+  <path class="loop" d="M350 270 C324 248 324 228 352 225"/><path class="loop" d="M500 270 C526 248 526 228 498 225"/>
+  <path class="loop" d="M350 356 C324 334 324 314 352 311"/><path class="loop" d="M500 356 C526 334 526 314 498 311"/>
+  <rect x="318" y="420" width="10" height="10" fill="#f06c00"/><text class="small" x="342" y="430">Node projection: Linear(4 -> 16)</text>
+  <rect x="318" y="452" width="10" height="10" fill="#f06c00"/><text class="small" x="342" y="462">Attention score:</text>
+  <text class="small" x="342" y="486">a([h_target || h_source])</text>
+  <text class="small" x="342" y="510">concat dim 32 -> 1</text>
+  <rect x="318" y="536" width="10" height="10" fill="#f06c00"/><text class="small" x="342" y="546">Softmax over incoming edges</text>
+  <rect x="318" y="568" width="10" height="10" fill="#f06c00"/><text class="small" x="342" y="578">Weighted aggregation + self-loops</text>
+  <rect class="bo" x="326" y="626" width="192" height="70"/>
+  <text class="small" x="422" y="652" text-anchor="middle">Output per time step</text>
+  <text class="formula" x="422" y="680" text-anchor="middle">H<tspan baseline-shift="super" font-size="13">gat</tspan> in R<tspan baseline-shift="super" font-size="13">4 x 16</tspan></text>
+  <text class="text" x="422" y="724" text-anchor="middle" font-weight="800">GAT hidden size = 16</text>
 
-  <path class="arr" d="M774 427 L804 427"/>
-  <rect class="card b" x="804" y="102" width="226" height="650"/><circle class="badge" cx="834" cy="132" r="18" fill="#0b4da2"/><text class="badgeText" x="834" y="139" text-anchor="middle">4</text><text class="h" x="862" y="140">Flatten Nodes</text>
-  <text class="t" x="917" y="190" text-anchor="middle">4 node embeddings</text>
-  <text class="s" x="917" y="214" text-anchor="middle">by concatenation</text>
-  <rect class="vl" x="862" y="270" width="92" height="18"/><text class="s" x="966" y="285">16</text><rect class="va" x="862" y="324" width="92" height="18"/><text class="s" x="966" y="339">16</text><rect class="vf" x="862" y="378" width="92" height="18"/><text class="s" x="966" y="393">16</text><rect class="vp" x="862" y="432" width="92" height="18"/><text class="s" x="966" y="447">16</text>
-  <path class="edge" d="M908 462 L908 512"/><rect class="vl" x="842" y="528" width="40" height="18"/><rect class="va" x="882" y="528" width="40" height="18"/><rect class="vf" x="922" y="528" width="40" height="18"/><rect class="vp" x="962" y="528" width="40" height="18"/>
-  <rect class="boxB" x="842" y="600" width="150" height="72"/><text class="s" x="917" y="628" text-anchor="middle">Sequence tensor</text><text class="f" x="917" y="656" text-anchor="middle">Z in R<tspan baseline-shift="super" font-size="13">10 x 64</tspan></text>
+  <path class="arrow" d="M548 425 L578 425"/>
 
-  <path class="arr" d="M1030 427 L1060 427"/>
-  <rect class="card p" x="1060" y="102" width="254" height="650"/><circle class="badge" cx="1090" cy="132" r="18" fill="#4b1f9f"/><text class="badgeText" x="1090" y="139" text-anchor="middle">5</text><text class="hp" x="1118" y="140">GRU Temporal Encoder</text>
-  <text class="s" x="1187" y="190" text-anchor="middle">GRU(input=64, hidden=64, layers=1)</text>
-  <rect class="boxP" x="1128" y="270" width="54" height="34"/><text class="t" x="1155" y="293" text-anchor="middle">GRU</text><rect class="boxP" x="1214" y="270" width="54" height="34"/><text class="t" x="1241" y="293" text-anchor="middle">GRU</text><path class="edge" d="M1182 287 L1214 287"/>
-  <rect class="boxP" x="1128" y="360" width="54" height="34"/><text class="t" x="1155" y="383" text-anchor="middle">GRU</text><rect class="boxP" x="1214" y="360" width="54" height="34"/><text class="t" x="1241" y="383" text-anchor="middle">GRU</text><path class="edge" d="M1182 377 L1214 377"/>
-  <text class="s" x="1138" y="456">...</text>
-  <rect class="boxP" x="1128" y="500" width="54" height="34"/><text class="t" x="1155" y="523" text-anchor="middle">GRU</text><rect class="boxP" x="1214" y="500" width="54" height="34"/><text class="t" x="1241" y="523" text-anchor="middle">GRU</text><path class="edge" d="M1182 517 L1214 517"/>
-  <rect class="vp" x="1130" y="590" width="118" height="22"/><text class="f" x="1187" y="660" text-anchor="middle">h<tspan baseline-shift="sub" font-size="13">t</tspan> in R<tspan baseline-shift="super" font-size="13">64</tspan></text>
+  <!-- 3 Projector -->
+  <rect class="card green" x="578" y="100" width="196" height="650"/>
+  <circle cx="608" cy="130" r="18" fill="#177236"/><text class="badgeText" x="608" y="137" text-anchor="middle">3</text>
+  <text class="h hg" x="636" y="138">Node Projector</text>
+  <text class="small" x="676" y="194" text-anchor="middle">MLP shared across nodes</text>
+  <rect class="bg" x="620" y="254" width="112" height="42"/><text class="text" x="676" y="281" text-anchor="middle">ReLU</text>
+  <path class="edge" d="M676 296 L676 334"/>
+  <rect class="bg" x="606" y="334" width="140" height="42"/><text class="text" x="676" y="361" text-anchor="middle">Linear(16 -> 16)</text>
+  <path class="edge" d="M676 376 L676 414"/>
+  <rect class="bg" x="620" y="414" width="112" height="42"/><text class="text" x="676" y="441" text-anchor="middle">ReLU</text>
+  <rect class="bg" x="604" y="626" width="144" height="70"/>
+  <text class="small" x="676" y="652" text-anchor="middle">Output per time step</text>
+  <text class="formula" x="676" y="680" text-anchor="middle">H<tspan baseline-shift="super" font-size="13">proj</tspan> in R<tspan baseline-shift="super" font-size="13">4 x 16</tspan></text>
 
-  <path class="arr" d="M1314 427 L1344 427"/>
-  <rect class="card r" x="1344" y="102" width="166" height="650"/><circle class="badge" cx="1374" cy="132" r="18" fill="#c92323"/><text class="badgeText" x="1374" y="139" text-anchor="middle">6</text><text class="hr" x="1402" y="140">Context Concat</text>
-  <text class="s" x="1427" y="204" text-anchor="middle">Context scalar</text>
-  <rect class="boxR" x="1374" y="236" width="106" height="56"/><text class="m" x="1427" y="260" text-anchor="middle">last_off</text><text class="m" x="1427" y="280" text-anchor="middle">ambient</text>
-  <path class="edge" d="M1427 292 L1427 484"/>
-  <rect class="vp" x="1378" y="540" width="82" height="20"/><rect class="boxR" x="1468" y="536" width="18" height="28"/>
-  <rect class="box" x="1368" y="604" width="118" height="52"/><text class="s" x="1427" y="626" text-anchor="middle">[h_t ; context]</text><text class="f" x="1427" y="648" text-anchor="middle">R<tspan baseline-shift="super" font-size="13">65</tspan></text>
+  <path class="arrow" d="M774 425 L804 425"/>
 
-  <path class="arr" d="M1510 427 L1540 427"/>
-  <rect class="card o" x="1540" y="102" width="190" height="650"/><circle class="badge" cx="1570" cy="132" r="18" fill="#c56000"/><text class="badgeText" x="1570" y="139" text-anchor="middle">7</text><text class="ho" x="1598" y="140">Quantile Head</text>
-  <rect class="boxO" x="1572" y="224" width="126" height="38"/><text class="t" x="1635" y="249" text-anchor="middle">Linear(65 -> 64)</text><path class="edge" d="M1635 262 L1635 294"/>
-  <rect class="boxO" x="1572" y="294" width="126" height="38"/><text class="t" x="1635" y="319" text-anchor="middle">ReLU</text><path class="edge" d="M1635 332 L1635 364"/>
-  <rect class="boxO" x="1572" y="364" width="126" height="38"/><text class="t" x="1635" y="389" text-anchor="middle">Dropout(0.3)</text><path class="edge" d="M1635 402 L1635 434"/>
-  <rect class="boxO" x="1572" y="434" width="126" height="38"/><text class="t" x="1635" y="459" text-anchor="middle">Linear(64 -> 6)</text>
-  <rect class="boxO" x="1562" y="534" width="146" height="120"/><text class="s" x="1635" y="558" text-anchor="middle" font-weight="800">Monotonic transform</text><text class="s" x="1635" y="586" text-anchor="middle">P10 = c - softplus(wL)</text><text class="s" x="1635" y="610" text-anchor="middle">P50 = c</text><text class="s" x="1635" y="634" text-anchor="middle">P90 = c + softplus(wH)</text>
+  <!-- 4 Flatten -->
+  <rect class="card blue" x="804" y="100" width="226" height="650"/>
+  <circle cx="834" cy="130" r="18" fill="#0b4da2"/><text class="badgeText" x="834" y="137" text-anchor="middle">4</text>
+  <text class="h hb" x="862" y="138">Flatten Nodes</text>
+  <text class="text" x="917" y="184" text-anchor="middle">Flatten 4 node embeddings</text>
+  <text class="small" x="917" y="208" text-anchor="middle">by concatenation</text>
+  <circle cx="850" cy="278" r="17" class="nL"/><text class="text" x="850" y="284" text-anchor="middle" font-weight="800">L</text><rect class="nL" x="884" y="266" width="90" height="20"/><text class="small" x="992" y="282">16</text>
+  <circle cx="850" cy="334" r="17" class="nA"/><text class="text" x="850" y="340" text-anchor="middle" font-weight="800">A</text><rect class="nA" x="884" y="322" width="90" height="20"/><text class="small" x="992" y="338">16</text>
+  <circle cx="850" cy="390" r="17" class="nF"/><text class="text" x="850" y="396" text-anchor="middle" font-weight="800">F</text><rect class="nF" x="884" y="378" width="90" height="20"/><text class="small" x="992" y="394">16</text>
+  <circle cx="850" cy="446" r="17" class="nP"/><text class="text" x="850" y="452" text-anchor="middle" font-weight="800">P</text><rect class="nP" x="884" y="434" width="90" height="20"/><text class="small" x="992" y="450">16</text>
+  <path class="edge" d="M918 470 L918 528"/>
+  <rect class="nL" x="850" y="546" width="36" height="18"/><rect class="nA" x="886" y="546" width="36" height="18"/><rect class="nF" x="922" y="546" width="36" height="18"/><rect class="nP" x="958" y="546" width="36" height="18"/>
+  <line x1="850" y1="576" x2="994" y2="576" stroke="#111" stroke-width="1.2"/><text class="small" x="918" y="600" text-anchor="middle">64</text>
+  <rect class="bb" x="842" y="626" width="152" height="70"/>
+  <text class="small" x="918" y="652" text-anchor="middle">Sequence tensor</text>
+  <text class="formula" x="918" y="680" text-anchor="middle">Z in R<tspan baseline-shift="super" font-size="13">10 x 64</tspan></text>
 
-  <path class="arr" d="M1730 427 L1760 427"/>
-  <rect class="card b" x="1760" y="102" width="112" height="650"/><circle class="badge" cx="1790" cy="132" r="18" fill="#0b4da2"/><text class="badgeText" x="1790" y="139" text-anchor="middle">8</text><text class="h" x="1818" y="140">Output</text>
-  <rect class="boxO" x="1778" y="250" width="76" height="120"/><text class="s" x="1816" y="280" text-anchor="middle" fill="#d95d00">ambient</text><text class="m" x="1816" y="312" text-anchor="middle">P10</text><text class="m" x="1816" y="338" text-anchor="middle">P50</text><text class="m" x="1816" y="364" text-anchor="middle">P90</text>
-  <rect class="boxP" x="1778" y="424" width="76" height="120"/><text class="s" x="1816" y="454" text-anchor="middle" fill="#3f1b88">power</text><text class="m" x="1816" y="486" text-anchor="middle">P10</text><text class="m" x="1816" y="512" text-anchor="middle">P50</text><text class="m" x="1816" y="538" text-anchor="middle">P90</text>
-  <text class="s" x="1816" y="610" text-anchor="middle">2 variables</text><text class="s" x="1816" y="632" text-anchor="middle">x 3 quantiles</text>
+  <path class="arrow" d="M1030 425 L1060 425"/>
 
-  <!-- Bottom strip -->
-  <rect class="strip" x="28" y="786" width="1844" height="190"/>
-  <text class="stripHead" x="64" y="826">Graph Structure</text>
-  <text class="t" x="64" y="858">Nodes: L light_state, F fan_state, A ambient_light, P total_power_w.</text>
-  <text class="t" x="64" y="888">Edges: L -> A, L -> P, F -> P, plus self-loops on all nodes.</text>
-  <text class="stripHead" x="630" y="826">Target, Loss, and Thresholds</text>
-  <text class="t" x="630" y="858">Target: median(t+3,t+4,t+5) - current; skip future state transitions.</text>
-  <text class="t" x="630" y="888">Loss: weighted pinball quantile loss for P10/P50/P90 in standardized response space.</text>
-  <text class="t" x="630" y="918">Thresholds: validation interval-error percentile, saved as total and per-target thresholds.</text>
-  <text class="stripHead" x="1260" y="826">Dimension Summary</text>
-  <text class="t" x="1260" y="858">Input R^10x4x4 -> flattened sequence R^10x64.</text>
-  <text class="t" x="1260" y="888">GRU hidden R^64 -> context concat R^65 -> quantile output R^6.</text>
-  <text class="s" x="950" y="970" text-anchor="middle">Online anomaly if total_error or per-target interval error exceeds its threshold for the configured consecutive count; temperature remains future work.</text>
+  <!-- 5 GRU -->
+  <rect class="card purple" x="1060" y="100" width="254" height="650"/>
+  <circle cx="1090" cy="130" r="18" fill="#4b1f9f"/><text class="badgeText" x="1090" y="137" text-anchor="middle">5</text>
+  <text class="h hp" x="1187" y="136" text-anchor="middle">GRU Temporal</text>
+  <text class="h hp" x="1187" y="160" text-anchor="middle">Encoder</text>
+  <text class="small" x="1187" y="184" text-anchor="middle">GRU(input_size=64,</text>
+  <text class="small" x="1187" y="204" text-anchor="middle">hidden_size=64, num_layers=1)</text>
+  <text class="text" x="1092" y="292" text-anchor="middle">t-9</text>
+  <rect class="bp" x="1130" y="268" width="52" height="34"/><text class="small" x="1156" y="291" text-anchor="middle">GRU</text>
+  <rect class="bp" x="1214" y="268" width="52" height="34"/><text class="small" x="1240" y="291" text-anchor="middle">GRU</text>
+  <path class="edge" d="M1182 285 L1214 285"/>
+  <text class="text" x="1092" y="388" text-anchor="middle">t-8</text>
+  <rect class="bp" x="1130" y="364" width="52" height="34"/><text class="small" x="1156" y="387" text-anchor="middle">GRU</text>
+  <rect class="bp" x="1214" y="364" width="52" height="34"/><text class="small" x="1240" y="387" text-anchor="middle">GRU</text>
+  <path class="edge" d="M1182 381 L1214 381"/>
+  <text class="text" x="1096" y="462" text-anchor="middle">...</text><text class="text" x="1096" y="520" text-anchor="middle">t</text>
+  <rect class="bp" x="1130" y="496" width="52" height="34"/><text class="small" x="1156" y="519" text-anchor="middle">GRU</text>
+  <rect class="bp" x="1214" y="496" width="52" height="34"/><text class="small" x="1240" y="519" text-anchor="middle">GRU</text>
+  <path class="edge" d="M1182 513 L1214 513"/>
+  <path class="edge" d="M1156 302 L1156 364"/><path class="edge" d="M1156 398 L1156 496"/><path class="edge" d="M1240 302 L1240 364"/><path class="edge" d="M1240 398 L1240 496"/>
+  <rect class="nP" x="1130" y="606" width="118" height="22"/>
+  <text class="formula" x="1187" y="684" text-anchor="middle">h<tspan baseline-shift="sub" font-size="13">t</tspan> in R<tspan baseline-shift="super" font-size="13">64</tspan></text>
+
+  <path class="arrow" d="M1314 425 L1344 425"/>
+
+  <!-- 6 Context -->
+  <rect class="card red" x="1344" y="100" width="166" height="650"/>
+  <circle cx="1374" cy="130" r="18" fill="#c92323"/><text class="badgeText" x="1374" y="137" text-anchor="middle">6</text>
+  <text class="h hr" x="1438" y="136" text-anchor="middle">Context</text>
+  <text class="h hr" x="1438" y="160" text-anchor="middle">Concat</text>
+  <text class="text" x="1427" y="194" text-anchor="middle">Context scalar</text>
+  <rect class="br" x="1372" y="226" width="110" height="58"/>
+  <text class="mono" x="1427" y="250" text-anchor="middle">last_off</text>
+  <text class="mono" x="1427" y="270" text-anchor="middle">ambient_median</text>
+  <path class="edge" d="M1427 284 L1427 492"/>
+  <rect x="1418" y="392" width="18" height="18" fill="#ffb8b8" stroke="#df1f26"/>
+  <rect class="box" x="1366" y="510" width="122" height="58"/>
+  <text class="text" x="1427" y="534" text-anchor="middle">Concatenate</text>
+  <text class="formula" x="1427" y="558" text-anchor="middle">[h<tspan baseline-shift="sub" font-size="13">t</tspan> ; context]</text>
+  <rect class="nP" x="1376" y="610" width="88" height="22"/><rect x="1470" y="606" width="20" height="30" fill="#ffb8b8" stroke="#df1f26"/>
+  <text class="small" x="1427" y="666" text-anchor="middle">Total dim = 65</text>
+
+  <path class="arrow" d="M1510 425 L1540 425"/>
+
+  <!-- 7 Quantile -->
+  <rect class="card orange" x="1540" y="100" width="190" height="650"/>
+  <circle cx="1570" cy="130" r="18" fill="#c56000"/><text class="badgeText" x="1570" y="137" text-anchor="middle">7</text>
+  <text class="h ho" x="1635" y="138" text-anchor="middle">Quantile</text>
+  <text class="h ho" x="1635" y="164" text-anchor="middle">Prediction Head</text>
+  <text class="text" x="1635" y="206" text-anchor="middle" font-weight="800">MLP Head</text>
+  <rect class="bo" x="1570" y="236" width="130" height="36"/><text class="text" x="1635" y="260" text-anchor="middle">Linear(65 -> 64)</text>
+  <path class="edge" d="M1635 272 L1635 304"/>
+  <rect class="bo" x="1570" y="304" width="130" height="36"/><text class="text" x="1635" y="328" text-anchor="middle">ReLU</text>
+  <path class="edge" d="M1635 340 L1635 372"/>
+  <rect class="bo" x="1570" y="372" width="130" height="36"/><text class="text" x="1635" y="396" text-anchor="middle">Dropout(0.3)</text>
+  <path class="edge" d="M1635 408 L1635 440"/>
+  <rect class="bo" x="1570" y="440" width="130" height="36"/><text class="text" x="1635" y="464" text-anchor="middle">Linear(64 -> 6)</text>
+  <rect class="bo" x="1558" y="520" width="154" height="132"/>
+  <text class="small" x="1635" y="544" text-anchor="middle" font-weight="800">Monotonic quantile</text>
+  <text class="small" x="1635" y="562" text-anchor="middle" font-weight="800">transform</text>
+  <text class="tiny" x="1635" y="592" text-anchor="middle">P10 = center - softplus(w_low)</text>
+  <text class="small" x="1635" y="616" text-anchor="middle">P50 = center</text>
+  <text class="tiny" x="1635" y="640" text-anchor="middle">P90 = center + softplus(w_high)</text>
+  <text class="small" x="1635" y="710" text-anchor="middle">2 variables x 3 quantiles = 6 outputs</text>
+
+  <path class="arrow" d="M1730 425 L1760 425"/>
+
+  <!-- 8 Output -->
+  <rect class="card blue" x="1760" y="100" width="180" height="650"/>
+  <circle cx="1790" cy="130" r="18" fill="#0b4da2"/><text class="badgeText" x="1790" y="137" text-anchor="middle">8</text>
+  <text class="h hb" x="1818" y="138">Output</text>
+  <text class="small" x="1850" y="204" text-anchor="middle">Quantile intervals</text>
+  <text class="small" x="1850" y="224" text-anchor="middle">per response variable</text>
+  <rect class="bo" x="1782" y="262" width="136" height="124"/>
+  <text class="small" x="1850" y="294" text-anchor="middle" fill="#d95d00" font-weight="800">ambient_light</text>
+  <rect class="box" x="1794" y="326" width="34" height="26"/><text class="mono" x="1811" y="344" text-anchor="middle">P10</text>
+  <rect class="box" x="1834" y="326" width="34" height="26"/><text class="mono" x="1851" y="344" text-anchor="middle">P50</text>
+  <rect class="box" x="1874" y="326" width="34" height="26"/><text class="mono" x="1891" y="344" text-anchor="middle">P90</text>
+  <rect class="bp" x="1782" y="440" width="136" height="124"/>
+  <text class="small" x="1850" y="472" text-anchor="middle" fill="#3f1b88" font-weight="800">total_power_w</text>
+  <rect class="box" x="1794" y="504" width="34" height="26"/><text class="mono" x="1811" y="522" text-anchor="middle">P10</text>
+  <rect class="box" x="1834" y="504" width="34" height="26"/><text class="mono" x="1851" y="522" text-anchor="middle">P50</text>
+  <rect class="box" x="1874" y="504" width="34" height="26"/><text class="mono" x="1891" y="522" text-anchor="middle">P90</text>
+  <rect class="bb" x="1784" y="628" width="132" height="80"/>
+  <text class="small" x="1850" y="654" text-anchor="middle">response =</text>
+  <text class="small" x="1850" y="674" text-anchor="middle">median(t+3,t+4,t+5)</text>
+  <text class="small" x="1850" y="694" text-anchor="middle">- current</text>
+
+  <!-- Bottom summary strip -->
+  <rect class="strip" x="28" y="784" width="1912" height="198"/>
+  <line class="sep" x1="575" y1="800" x2="575" y2="964"/><line class="sep" x1="960" y1="800" x2="960" y2="964"/><line class="sep" x1="1240" y1="800" x2="1240" y2="964"/><line class="sep" x1="1600" y1="800" x2="1600" y2="964"/>
+
+  <text class="stripHead" x="64" y="828">Graph Structure</text>
+  <circle cx="86" cy="876" r="22" class="nL"/><text class="nodeText" x="86" y="884" text-anchor="middle">L</text>
+  <circle cx="220" cy="876" r="22" class="nA"/><text class="nodeText" x="220" y="884" text-anchor="middle">A</text>
+  <circle cx="86" cy="936" r="22" class="nF"/><text class="nodeText" x="86" y="944" text-anchor="middle">F</text>
+  <circle cx="220" cy="936" r="22" class="nP"/><text class="nodeText" x="220" y="944" text-anchor="middle">P</text>
+  <path class="edge" d="M108 876 L198 876"/><path class="edge" d="M104 892 L202 920"/><path class="edge" d="M108 936 L198 936"/>
+  <text class="small" x="282" y="862">L light_state (binary)</text><text class="small" x="282" y="892">F fan_state (binary)</text><text class="small" x="282" y="922">A ambient_light</text><text class="small" x="282" y="952">P total_power_w</text>
+
+  <text class="stripHead" x="610" y="828">Node Feature Vector</text>
+  <rect class="box" x="612" y="870" width="58" height="58"/><text class="small" x="641" y="904" text-anchor="middle">value</text>
+  <rect class="box" x="678" y="870" width="72" height="58"/><text class="small" x="714" y="896" text-anchor="middle">delta</text><text class="tiny" x="714" y="916" text-anchor="middle">(x_t-x_t-1)</text>
+  <rect class="box" x="758" y="870" width="82" height="58"/><text class="small" x="799" y="896" text-anchor="middle">age_sec</text><text class="tiny" x="799" y="916" text-anchor="middle">last update</text>
+  <rect class="box" x="848" y="870" width="76" height="58"/><text class="small" x="886" y="896" text-anchor="middle">node_type</text><text class="tiny" x="886" y="916" text-anchor="middle">one-hot</text>
+  <text class="text" x="768" y="958" text-anchor="middle" font-weight="800">Feature dimension = 4</text>
+
+  <text class="stripHead" x="992" y="828">Edge Set</text>
+  <text class="text" x="992" y="864">L -> A  light affects sensor</text>
+  <text class="text" x="992" y="900">L -> P  light contributes power</text>
+  <text class="text" x="992" y="936">F -> P  fan contributes power</text>
+  <text class="small" x="992" y="962">Self-loops on all nodes</text>
+
+  <text class="stripHead" x="1272" y="828">Notation</text>
+  <text class="text" x="1272" y="862">t: current time step</text>
+  <text class="text" x="1272" y="892">Past input window: 10s = t-9 ... t</text>
+  <text class="text" x="1272" y="922">Future horizon: 5s = t+1 ... t+5</text>
+  <text class="text" x="1272" y="952">P10, P50, P90: quantile intervals</text>
+
+  <text class="stripHead" x="1625" y="828">Dimensions</text>
+  <text class="text" x="1625" y="862">Input: R^10 x 4 x 4</text>
+  <text class="text" x="1625" y="892">After flatten: R^10 x 64</text>
+  <text class="text" x="1625" y="922">After context concat: R^65</text>
+  <text class="text" x="1625" y="952">Quantile output: R^6</text>
+
+  <text class="small" x="990" y="1018" text-anchor="middle"><tspan font-weight="800" fill="#0b2b6f">Self-review note:</tspan> current code excludes the temperature node; temperature remains in measured delay analysis and future work.</text>
 </svg>
